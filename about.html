@@ -16,38 +16,45 @@
 	a:hover {
 	    color: #675532;
 	}
-	#contest {
-		color: red;
-		font-size: 40px;
-	}
-	#contest:link, #contest:visited, #contest:hover {
-		color: red;
-	}
-	
-	#contest {   
-	  animation-duration: 400ms;
-	  animation-name: blink;
-	  animation-iteration-count: infinite;
-	  animation-direction: alternate;
+	@-webkit-keyframes typing {
+	    from { width: 0 }
+	    to { width:16.3em }
 	}
 
-	@keyframes blink {
-	  from {
-	    opacity: 1;
-	  }
-
-	  to {
-	    opacity: 0;
-	  }
+	@-moz-keyframes typing {
+	    from { width: 0 }
+	    to { width:16.3em }
 	}
-	
+
+	@-webkit-keyframes blink-caret {
+	    from, to { border-color: transparent }
+	    50% { border-color: black }
+	}
+
+	@-moz-keyframes blink-caret {
+	    from, to { border-color: transparent }
+	    50% { border-color: black }
+	}
+
+	body { font-family: Consolas, monospace; }
+
+	h1 { 
+	    font-size:300%;
+	    width:16.3em;
+	    white-space:nowrap;
+	    overflow:hidden;
+		align:center;
+    
+	    -webkit-animation: typing 10s steps(30, end), /* # of steps = # of characters */
+	                        blink-caret 1s step-end infinite;
+	    -moz-animation: typing 10s steps(30, end), /* # of steps = # of characters */
+	                        blink-caret 1s step-end infinite;
+	}
 	</style>
 	<center><img src="Picture.jpg" align="middle"></center>
 	<p align="center">
 		<b>
-			<font color="black" style="font-size:50px" face="arial">
-				SOREN WAS ALONE.
-			</font>
+			<center><h1>SOREN WAS ALONE.</h1></center>
 		</b>
 	</p>
 
@@ -66,6 +73,9 @@
 				&nbsp;	[Contact] 
 				</a>
 				&nbsp;&nbsp; | &nbsp;
+				<a href="sorenwasalone.github.com" target="_blank">
+					[GitHub]
+				&nbsp;&nbsp; | &nbsp;
 				<a href="https://soundcloud.com/sorenmakesmusic" target="_blank">
 					[Music]
 				</a>
@@ -76,9 +86,10 @@
 <body>
 	<p align="center"> 
 		<font face="arial" style="font-size:20px" color="black" >
-			<b>
+			<b><br>
 				<u>ABOUT ME.</u><br>
 			</b>
+			<br>
 		</font>
 	</p>
 	<p align="left">
